@@ -1,6 +1,5 @@
 package NuevoCliente;
 
-import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -41,15 +40,6 @@ public class NuevoClienteController extends GridPane implements Initializable {
     private TextArea obervacionesBox;
 
     @FXML
-    private RadioButton mujerRadioButton;
-
-    @FXML
-    private RadioButton hombreRadioButton;
-
-    @FXML
-    private RadioButton otrosRadioButton;
-
-    @FXML
     private TextField direccionField;
 
     private NuevoClienteModel model;
@@ -86,17 +76,6 @@ public class NuevoClienteController extends GridPane implements Initializable {
         model.direccionProperty().bindBidirectional(direccionField.textProperty());
 
         nacimientoField.setEditable(false);
-
-        ToggleGroup grupo = new ToggleGroup();
-        hombreRadioButton.setToggleGroup(grupo);
-        mujerRadioButton.setToggleGroup(grupo);
-        otrosRadioButton.setToggleGroup(grupo);
-
-        model.generoProperty().bind(Bindings.when(mujerRadioButton.selectedProperty()).then("Mujer").otherwise(Bindings.when(hombreRadioButton.selectedProperty()).then("Hombre").otherwise("Otro")));
-
-        model.generoProperty().addListener(e -> {
-            System.out.println(model.getGenero());
-        });
     }
 
     public NuevoClienteModel getModel() {
@@ -105,17 +84,5 @@ public class NuevoClienteController extends GridPane implements Initializable {
 
     public TextField getDniField() {
         return dniField;
-    }
-
-    public RadioButton getMujerRadioButton() {
-        return mujerRadioButton;
-    }
-
-    public RadioButton getHombreRadioButton() {
-        return hombreRadioButton;
-    }
-
-    public RadioButton getOtrosRadioButton() {
-        return otrosRadioButton;
     }
 }

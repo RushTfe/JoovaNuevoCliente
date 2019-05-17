@@ -12,7 +12,6 @@ public class NuevoClienteModel {
     private StringProperty telefonoCliente;
     private StringProperty mailCliente;
     private StringProperty observacionesCliente;
-    private StringProperty genero;
     private StringProperty direccion;
     private ObjectProperty<LocalDate> nacimientoCliente;
     private BooleanProperty clienteHuefano;
@@ -24,7 +23,6 @@ public class NuevoClienteModel {
         telefonoCliente = new SimpleStringProperty(this, "telefonoCliente");
         mailCliente = new SimpleStringProperty(this, "mailCliente");
         observacionesCliente = new SimpleStringProperty(this, "observacionesCliente");
-        genero = new SimpleStringProperty(this, "genero");
         direccion = new SimpleStringProperty(this, "direccion");
         nacimientoCliente = new SimpleObjectProperty<>(this, "nacimientoCliente");
         clienteHuefano = new SimpleBooleanProperty(this, "clienteHuerfano");
@@ -40,18 +38,6 @@ public class NuevoClienteModel {
 
     public void setObservacionesCliente(String observacionesCliente) {
         this.observacionesCliente.set(observacionesCliente);
-    }
-
-    public String getGenero() {
-        return genero.get();
-    }
-
-    public StringProperty generoProperty() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero.set(genero);
     }
 
     public String getDireccion() {
