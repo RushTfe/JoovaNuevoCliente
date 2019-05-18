@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -18,12 +19,13 @@
       <TextField fx:id="emailField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="eMail" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1" />
       <DatePicker fx:id="nacimientoField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Fecha de Nacimiento" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2" />
       <TextField fx:id="direccionField" promptText="Direccion" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" />
-      <CheckBox fx:id="huefanoBox" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="¿Es el cliente huérfano?" GridPane.columnSpan="2147483647" GridPane.rowIndex="4" />
+      <CheckBox fx:id="huefanoBox" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="¿Es el cliente huérfano?" GridPane.columnSpan="2" GridPane.rowIndex="4" />
       <TextArea fx:id="obervacionesBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Observaciones...... (Opcionales)" wrapText="true" GridPane.columnSpan="2147483647" GridPane.rowIndex="5" GridPane.rowSpan="2147483647">
          <padding>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </padding>
       </TextArea>
+      <ComboBox fx:id="productosCombobox" prefWidth="150.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4" />
    </children>
    <columnConstraints>
       <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="100.0" />
